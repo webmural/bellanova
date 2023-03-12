@@ -4,32 +4,27 @@
 
 .wox {
   background-color: violet;
-  background-image: linear-gradient(.333turn, violet, violet 30%, hotpink 30%, hotpink);
+  background-image: radial-gradient(mediumpurple, deepskyblue, violet, hotpink);
 }
 
-.wux {
+.lan {
   background-color: violet;
-  background-image: linear-gradient(.333turn, violet, violet 50%, hotpink 50%, hotpink);
+  background-image: conic-gradient(coral, violet, mediumpurple);
 }
 
-.lux {
-  background-color: orchid;
-  background-image: linear-gradient(.333turn, violet, violet 50%, transparent 50%, transparent);
-}
-
-.lix {
-  background-color: orchid;
-  background-image: linear-gradient(.333turn, violet, violet 30%, transparent 30%, transparent);
+.wuv {
+  background-color: violet;
+  background-image: linear-gradient(.333turn, violet, violet 30%, thistle 30%, thistle);
 }
 
 .luv {
   background-color: thistle;
-  background-image: linear-gradient(.666turn, violet, violet 50%, thistle 50%, thistle);
+  background-image: linear-gradient(.6turn, mediumpurple, violet, salmon);
 }
 
-.bip { font-size: 1.236em }
-.bop { font-size: 1.382em }
-.bup { font-size: 1.618em }
+.bip { font-size: 2em }
+.bop { font-size: 3em; writing-mode: sideways-lr }
+.bup { font-size: 5em; text-decoration-line: overline }
 
 :any-link {
   color: inherit;
@@ -47,7 +42,7 @@
 }
 
 html {
-  font: max(2em, 3vw + 3vh) sans-serif;
+  font: max(3ex, 3vmax + 2vmin) sans-serif;
   line-height: 1.618;
 }
 
@@ -56,31 +51,34 @@ body {
   overflow-wrap: anywhere;
 }
 
+article {
+  display: flex;
+  flex-flow: column;
+  contain: content;
+}
+
 h1 {
   margin: 0;
-  font: 2em monospace;
+  padding-block: 1rem;
   text-align: center;
+  transform: rotate(3deg);
 }
 
 a {
+  border-radius: 100%;
   display: flex;
-  padding: 1em;
-}
-
-menu {
-  list-style: circle;
-  margin: 0;
-  padding: 0;
+  padding: 1ch;
+  margin: auto;
+  margin-bottom: 1ch;
 }
 
 nav {
-  transform: rotate(180deg);
+  display: flex;
+  flex-flow: column;
+  padding: 1em;
+  transform: rotate(3deg);
 }
 
-@media (orientation: portrait) {
-  h1 {
-    width: 100%;
-    writing-mode: sideways-rl;
-    text-align: unset;
-  }
+[hidden] {
+  display: none;
 }
